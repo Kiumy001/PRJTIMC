@@ -1,99 +1,98 @@
-/* Configurações Globais */
-:root {
-    --primary-color: #28a745;
-    --primary-hover: #218838;
-    --bg-color: #f4f4f9;
-    --text-color: #333;
-    --white: #ffffff;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
+   /*background-color: #3e2f2f;*/
+    background: url('img.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    font-family: "Gill Sans", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 0; 
+}
+ 
+.container {      
+    background-position: center;    
+    background-repeat: no-repeat;       
+    position: relative;
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(2px);       
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;    
+    color: #000000;                   
 }
 
-/* Cartão da Calculadora */
-.card {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
+h1 {
+    color: #f4f4f4;
+    font-size: 3em;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 5px rgba(11, 11, 11, 0.7);
+    margin-top: 20px;
 }
 
-h2 {
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
-    font-weight: 600;
+.pedido, .carrinho {
+    background-color: rgba(67, 57, 51, 0.6);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 2px solid #271703;
 }
 
-/* Inputs e Labels */
-.input-group {
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #666;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box; /* Garante que o padding não quebre a largura */
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-/* Botão */
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #000000;
+    color: #dfcece;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1em;
+    text-transform: capitalize;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background 0.3s;
-    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: var(--primary-hover);
+    background-color: #000000;
+    transform: scale(1.05);
 }
 
-/* Resultado */
-#resultado {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 6px;
-    display: none; /* Escondido até o cálculo ser feito */
-    line-height: 1.6;
+input {
+    padding: 12px;
+    margin: 8px;
+    width: 200px;
+    border: 1px solid #3f3b3b;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
-.sucesso {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+li:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.02);
 }
