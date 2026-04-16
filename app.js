@@ -38,7 +38,7 @@ function salvarDados(novoDado){
         fs.writeFileSync(
             dadosFilePath, JSON.stringify(
                 dados, null, 2 ),'utf-8');
-        console.log('Dados salvos com sucesso!')
+        console.log('Dados salvos')
 
     } catch (error) {
         console.error('Erro ao salvar dados ', error);
@@ -54,7 +54,7 @@ app.post('/salvar',(req, res)=>{
     }
 
     salvarDados(dadosParaSalvar);
-    res.send('Dados salvos com sucesso!');
+    res.send('Dados salvos');
 });
 
 
@@ -64,7 +64,7 @@ app.get('/ler', (req, res)=>{
         res.json(dados)
         
     } catch (error) {
-        res.status(500).send('Erro ao ler os dados')
+        res.status(500).send('Erro ao seus dados')
     }
 })
 
@@ -75,5 +75,6 @@ app.listen(PORT, ()=>{
     console.log(
         `Servidor rodando em http://localhost:${PORT}`)
 });
+
 
 
