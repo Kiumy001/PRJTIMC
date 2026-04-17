@@ -58,14 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
             alturaInput.value = "";
 
         } else {
-            alert("Por favor, preencha os dados corretamente.");
+            alert("Preencha os dados corretamente");
         }
     });
 
     
     botaoSalvar.addEventListener('click', function() {
         if (pedidosData.length === 0) {
-            alert('Calcule um IMC antes de salvar');
+            alert('Calcule o imc para salvar');
             return;
         }
 
